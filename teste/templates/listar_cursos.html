@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+   <h2>Listar Cursos</h2>
+   <a href="#"> Cadastrar novo Curso </a>
+   <table>
+        <thead>
+           <tr>
+               <th> Nome do curso </th>
+           </tr>
+        </thead>
+        <tbody>
+             {% for  a in cursos %}
+               <tr> 
+                  <td>{{a.nome}}</td>
+                     <a href="#">Editar</a>
+                     <a href="#">Excluir</a>
+                  </td>
+                  
+               </tr>
+              {% endfor %}             
+        </tbody>
+   </table>
+{% endblock %}
